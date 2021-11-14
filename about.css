@@ -14,7 +14,7 @@ body{
     background-color: black;
    /* text-decoration: blanchedalmond; */
     width: 100%;
-    /*height: 100vh; */
+    height: 100vh; 
     padding-bottom: 40px;
 
 }
@@ -71,5 +71,5 @@ dd:before {
 }
 
 .diagrama {
-    width: 100%;
+    width: 80%;
 }
