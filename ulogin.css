@@ -39,27 +39,37 @@ nav ul {
     
 }
 
-nav ul li a {
+ nav ul li a {
+    color: lightcyan;
+    text-decoration: none;
+    display: block;
+    width: 20%; 
+   
+    
+
+} 
+
+nav ul li  {
     color: lightcyan;
     text-decoration: none;
     display: block;
     width: 20%; 
     padding: 1em 2em;
-    /*background: rgb(94, 88, 88);*/
-    /* margin: 1rem; */
+    
 
 }
 
-nav ul li .logoutbtn {
-    color: lightcyan;
+ nav ul li form input {
+    /* color: rgb(0, 0, 0);
     text-decoration: none;
     display: block;
-    width: 20%; 
-    padding: 1em 2em;
-    /*background: rgb(94, 88, 88);*/
-    /* margin: 1rem; */
+    width: 40%;  */
+    background: rgb(18, 80, 212);
+    color: white;
+    border-radius: 40px;
+    cursor: pointer;
+}  
 
-}
 
 
 

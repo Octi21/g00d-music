@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Good Music</title>
     <link rel="shortcut icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/en/3/30/G.O.O.D._Music_logo.png"/>
-    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="ulogin.css">
 </head>
 
 <body>
@@ -24,7 +24,7 @@
                 <li>
                     <!-- <a href="login.php">LOG OUT</a> -->
                     <form action="ulogin.php" method="post">
-                        <input type="submit" name = "logout" value="Log Out" class= "logoutbtn">
+                        <input type="submit" name = "logout" value="Log Out" id= "logoutbtn">
                     </form>
                 </li>
                 <li><a href="#">MUSIC</a></li>
