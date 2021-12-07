@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,10 +21,35 @@
                 
                 <li><a href="about.html">ABOUT</a></li>
                 <li ><a href="#">ARTISTS</a></li>
-                <li><a href="register.php">CREATE ACCOUNT</a></li>
+                <li>
+                    <!-- <a href="login.php">LOG OUT</a> -->
+                    <form action="ulogin.php" method="post">
+                        <input type="submit" name = "logout" value="Log Out" class= "logoutbtn">
+                    </form>
+                </li>
                 <li><a href="#">MUSIC</a></li>
-            
+ 
+                <?php
+                    if(isset($_POST['logout']))
+                    {
+                        session_destroy();
+                        header('location:login.php');
+                    }
+                ?> 
+             
             </ul>
+
+            <!-- <form action="ulogin.php" method="post">
+                        <input type="submit" name = "logout" value="Log Out" class= "logoutbtn">
+            </form> -->
+
+            <?php
+                    // if(isset($_POST['logout']))
+                    // {
+                    //     session_destroy();
+                    //     header('location:login.php');
+                    // }
+                ?> 
         </nav>
 
         <a href="index.html"><img src="https://pbs.twimg.com/profile_images/963574378796593153/cjaTilaP_400x400.jpg" alt="site-logo"></a>>
