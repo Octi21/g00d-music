@@ -5,59 +5,19 @@ body{
     height: 100%;
     margin: 0;
     padding: 0;
+    
     font-family: 'Montserrat', sans-serif;
     
 }
 
-.cont1 {
-    padding-top: 10px; 
-    background-color: black;
-   /* text-decoration: blanchedalmond; */
-    width: 100%;
-    /*height: 100vh; */
-    padding-bottom: 70px;
-
-}
-
-.cont1 img{
-    position: absolute;
-        top: 170px;
-        right: 15%;
-        width: 20%;
-}
-
-nav ul {
-   
-    top: 0;
-    left: 0;
-    text-align: left;
-
-    
-    z-index: 6;
-    padding-top: 200px;
-    padding-bottom: 200px;
-    
-}
-
-nav ul li a {
-    color: lightcyan;
-
-    text-decoration: none;
-    display: block;
-    width: 20%; 
-    padding: 1em 2em;
-    /*background: rgb(94, 88, 88);*/
-    /* margin: 1rem; */
-
-}
 
 .fundal
 {
     background-image: url(https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/city-of-chicago-skyline-black-and-white-gregory-ballos.jpg) ;
     background-size: cover;
-    padding-bottom: 60px; 
-    padding-top: 60px;
-}    
+    padding-bottom: 180px; 
+    padding-top: 60px; 
+}   
 
 .register
 {
@@ -102,7 +62,7 @@ img
     margin-top:  60px;
     margin-bottom:  20px;
     background: rgb(18, 80, 212);
-    color: rgb(255, 255, 255);
+    color: white;
     border-radius: 40px;
     cursor: pointer;
 }
@@ -110,6 +70,6 @@ img
 .register a
 {
     text-decoration: none;
-    color: white;
+    color: rgb(255, 255, 255);
     padding: 10px;
 }
