@@ -1,9 +1,11 @@
 <?php
     include 'connection.php';
+    $gr = $_GET['grad'];
+    echo $gr;
 
     if(isset($_POST['btn-add']))
     {
-        // echo 'yes';
+        
         $name = $_POST['Name'];
         $artist = $_POST['Nartist'];
         $album  = $_POST['Nalbum'];
@@ -13,7 +15,7 @@
         if($result)
         {
             // echo 'great succes';
-            header('location:ulogin.php');
+            header("location:ulogin.php?grad=admin");
         }
         else
         {
@@ -44,7 +46,7 @@
                     <input type="text" placeholder = "Artist" class = "txt" name="Nartist">
                     <input type="text" placeholder = "Album" class = "txt" name="Nalbum">            
                     <input type="submit" value = "ADD" class = "btn" name="btn-add">
-                    <a href="ulogin.php">Return</a>
+                    <a href="ulogin.php?grad=<?php echo $_GET['grad'] ?>">Return</a>
                 </form>
         </div>
     </div>  

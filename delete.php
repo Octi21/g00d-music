@@ -1,5 +1,6 @@
 <?php
     include 'connection.php';
+    $gr = $_GET['grad'];
     if(isset($_GET['deleteid']))
     {
         
@@ -9,7 +10,7 @@
         if($result)
         {
             // echo 'yes';
-            header('location:ulogin.php');
+            header("location:ulogin.php?grad=$gr");
         } 
     }
     else

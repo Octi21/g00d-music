@@ -16,27 +16,30 @@
         {
             echo ' error2';
         }
-        
-        if($Cpassword != $Password)
-        {
-            echo ' wrong pass';
-        }
         else
         {
-            $pass = md5($Password);
-            $sql = "insert into utilizatori (Uname,Email,Password) values ('$UserName','$Email','$pass')";
-
-            $result = mysqli_query($con,$sql);
-
-            if($result)
+        
+            if($Cpassword != $Password)
             {
-                
-                header('location:login.php');
-                // echo '<script type="text/javascript"> alert("User registered ... Go to login ") </script>';
+                echo ' wrong pass';
             }
             else
             {
-                echo 'error3';
+                $pass = md5($Password);
+                $sql = "insert into utilizatori (Uname,Email,Password,Grad) values ('$UserName','$Email','$pass','client')";
+
+                $result = mysqli_query($con,$sql);
+
+                if($result)
+                {
+                    
+                    header('location:login.php');
+                    // echo '<script type="text/javascript"> alert("User registered ... Go to login ") </script>';
+                }
+                else
+                {
+                    echo 'error3';
+                }
             }
         }
     }

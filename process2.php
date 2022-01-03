@@ -22,13 +22,20 @@
             if($row = mysqli_fetch_assoc($result))
             {
                 $foundPass = $row['Password'];
+                $rol = $row['Grad'];
+                $id = $row['ID'];
 
+                session_start();
+                $_SESSION['idUtil'] = $id;
+            
+
+                //echo $rol;
                 if($foundPass == md5($Password))
                 {
                     // corect
                     // echo ' corect ai intrat';
                     // $_SESSION['username'] = $UserName;
-                    header('location:ulogin.php');
+                    header("location:ulogin.php? grad=$rol");
 
                 }
                 else
