@@ -84,9 +84,9 @@
                             $artist = $row['Nartist'];
                             $album = $row['Nalbum'];
                             echo '<tr>
-                                    <td>'.$name. '</td>
-                                    <td>'.$artist.'</td>
-                                    <td>'.$album.'</td>
+                                    <td>'.htmlspecialchars($name). '</td>
+                                    <td>'.htmlspecialchars($artist).'</td> 
+                                    <td>'.htmlspecialchars($album).'</td>
                                     <td>
                                     <button class="btn2">
                                         <a href="update.php? updateid='.$id.'&grad='.$gr.'" >Update </a>
@@ -95,7 +95,7 @@
                                         <a href="delete.php? deleteid='.$id.'&grad='.$gr.'" >Delete </a>
                                     </button>
                                     </td>
-                                </tr>';
+                                </tr>';                                                        // pt attack xss
                         
                         }
                     }
@@ -204,15 +204,15 @@
                             $artist = $row['Nartist'];
                             $album = $row['Nalbum'];
                             echo '<tr>
-                                    <td>'.$name. '</td>
-                                    <td>'.$artist.'</td>
-                                    <td>'.$album.'</td>
+                                    <td>'.htmlspecialchars($name). '</td>
+                                    <td>'.htmlspecialchars($artist).'</td>                          
+                                    <td>'.htmlspecialchars($album).'</td>
                                     <td>
                                     <button class="btn2">
                                         <a href="deleteCli.php? deleteid='.$id.'" >Delete </a>
                                     </button>
                                     </td>
-                                </tr>';
+                                </tr>';                                                            // pt attack xss
                         
                         }
                     }

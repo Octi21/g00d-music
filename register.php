@@ -30,6 +30,7 @@
         <div class="register">
                 <img src="https://i.imgur.com/4TQAOw9.png" >
                 <form action="process.php" method="post">
+                    <input type="text" name="title" class="hidden">                                     <!-- bot detector -->
                     <input type="text" placeholder = "Username" class = "txt" name="UserName">
                     <input type="email" placeholder = "Email" class = "txt" name="Email">
                     <input type="password" placeholder = "Password" class = "txt" name="Password">

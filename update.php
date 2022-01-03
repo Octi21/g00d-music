@@ -18,7 +18,7 @@
         $result0 = mysqli_query($con,$sql0);
         $row=mysqli_fetch_assoc($result0);
         $ghe = $row['IDalbum'];
-        echo $ghe;
+        echo htmlspecialchars($ghe);                                                 // xss attack
 
     if(isset($_POST['btn-update']))
     {

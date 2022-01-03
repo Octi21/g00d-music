@@ -113,3 +113,9 @@ img
     color: white;
     padding: 10px;
 }
+
+.hidden
+{
+    display: none;
+    visibility: hidden;
+}

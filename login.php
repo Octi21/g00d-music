@@ -1,5 +1,21 @@
 <?php
     session_start();
+
+    if(empty($_SESSION['key']))
+    {
+        $_SESSION['key'] = bin2hex(random_bytes(32));
+    }
+    $csrf = hash_hmac('sha256','this = login.php', $_SESSION['key']);
+    $_SESSION['fail'] =0;
+    if(isset($_POST['btn-save']))
+    {
+        if(!hash_equals($csrf, $_POST['csrf']))                                // csrf attack
+        {
+            $_SESSION['fail'] = 1;
+            echo "CSRF Token Failed";
+        }
+    }
+
 ?>
 
 <!DOCTYPE html>
@@ -34,6 +50,7 @@
         <div class="register">
                 <img src="https://i.imgur.com/4TQAOw9.png" >
                 <form action="process2.php" method="post">
+                    <input type="hidden" name="csrf" value="<?php echo $csrf  ?>">
                     <input type="text" placeholder = "Username or Email" class = "txt" name="UserName">
                     <input type="password" placeholder = "Password" class = "txt" name="Password">            
                     <input type="submit" value = "Login" class = "btn" name="btn-save">

@@ -39,15 +39,15 @@
             $artist = $row['Nartist'];
             $album = $row['Nalbum'];
             echo '<tr>
-                    <td>'.$name. '</td>
-                    <td>'.$artist.'</td>
-                    <td>'.$album.'</td>
+                    <td>'.htmlspecialchars($name). '</td>
+                    <td>'.htmlspecialchars($artist).'</td>
+                    <td>'.htmlspecialchars($album).'</td>
                     <td>
                     <button class="btn2">
                         <a href="addCli2.php?idmel= '.$id.'" >Adauga </a>
                     </button>
                     </td>
-                </tr>';
+                </tr>';                                                     /// pt attack xss
         
         }
     ?>
