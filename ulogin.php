@@ -43,7 +43,7 @@
            
         </nav>
 
-        <a href="index.html"><img src="https://pbs.twimg.com/profile_images/963574378796593153/cjaTilaP_400x400.jpg" alt="site-logo"></a>>
+        <a href="index.php"><img src="https://pbs.twimg.com/profile_images/963574378796593153/cjaTilaP_400x400.jpg" alt="site-logo"></a>>
 
     </div>
 
@@ -75,7 +75,7 @@
                     // else
                     //     echo 1;
                     $gr = $_GET['grad'];
-                     if($_GET['grad'] == "admin")
+                    if($_GET['grad'] == "admin")
                     {    
                         while($row=mysqli_fetch_assoc($results))
                         {
@@ -103,8 +103,16 @@
                 ?>
 
             </table>
+            
+            <button class="btn2">
+            <a href="stats.php?grad=admin" >Check da stocks</a>
+            </button>
 
         </div>
+
+        
+
+
     <?php } ?>
 
     <?php 
@@ -164,18 +172,18 @@
                     }
                     if(mysqli_num_rows($results)==0)
                     {
-                        echo "ghe2";
-                        $sql2 = "select p.IDplaylist
-                                from utilizatori u, playlists p
-                                where p.IDutilizator = u.ID and u.ID = $id";
-                        $result2 = mysqli_query($con,$sql2);
-                        if($row=mysqli_fetch_assoc($result2))
-                        {
+                        // echo "ghe2";
+                        // $sql2 = "select p.IDplaylist
+                        //         from utilizatori u, playlists p
+                        //         where p.IDutilizator = u.ID and u.ID = $id";
+                        // $result2 = mysqli_query($con,$sql2);
+                        // if($row=mysqli_fetch_assoc($result2))
+                        // {
                         
-                            $idpl = $row['IDplaylist'];  
-                            $_SESSION['idpl'] = $idpl;
-                            echo "id ul playlistului pe care il cauti este $idpl";
-                        }
+                        //     $idpl = $row['IDplaylist'];  
+                        //     $_SESSION['idpl'] = $idpl;
+                        //     echo "id ul playlistului pe care il cauti este $idpl";
+                        // }
 
                     }
                     else

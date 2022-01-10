@@ -23,7 +23,7 @@
             </ul>
         </nav>
 
-        <a href="index.html"><img src="https://pbs.twimg.com/profile_images/963574378796593153/cjaTilaP_400x400.jpg" alt="site-logo"></a>>
+        <a href="index.php"><img src="https://pbs.twimg.com/profile_images/963574378796593153/cjaTilaP_400x400.jpg" alt="site-logo"></a>>
 
     </div>
     <div class="fundal">
