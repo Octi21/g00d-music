@@ -172,18 +172,18 @@
                     }
                     if(mysqli_num_rows($results)==0)
                     {
-                        // echo "ghe2";
-                        // $sql2 = "select p.IDplaylist
-                        //         from utilizatori u, playlists p
-                        //         where p.IDutilizator = u.ID and u.ID = $id";
-                        // $result2 = mysqli_query($con,$sql2);
-                        // if($row=mysqli_fetch_assoc($result2))
-                        // {
+                        echo "ghe2";
+                        $sql2 = "select p.IDplaylist
+                                from utilizatori u, playlists p
+                                where p.IDutilizator = u.ID and u.ID = $id";
+                        $result2 = mysqli_query($con,$sql2);
+                        if($row=mysqli_fetch_assoc($result2))
+                        {
                         
-                        //     $idpl = $row['IDplaylist'];  
-                        //     $_SESSION['idpl'] = $idpl;
-                        //     echo "id ul playlistului pe care il cauti este $idpl";
-                        // }
+                            $idpl = $row['IDplaylist'];  
+                            $_SESSION['idpl'] = $idpl;
+                            echo "id ul playlistului pe care il cauti este $idpl";
+                        }
 
                     }
                     else
